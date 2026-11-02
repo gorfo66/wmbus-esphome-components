@@ -34,7 +34,7 @@ CONF_SYNC_MODE = "sync_mode"
 CODEOWNERS = ["@SzczepanLeon"]
 
 DEPENDENCIES = ["time"]
-AUTO_LOAD = ["sensor", "text_sensor"]
+AUTO_LOAD = ["sensor", "text_sensor", "wmbus_drivers", "smarttc_cc1101"]
 
 wmbus_ns = cg.esphome_ns.namespace('wmbus')
 WMBusComponent = wmbus_ns.class_('WMBusComponent', cg.Component)
@@ -117,15 +117,3 @@ async def to_code(config):
         cg.add(var.set_led_blink_time(config[CONF_LED_BLINK_TIME].total_milliseconds))
 
     cg.add_library("SPI", None)
-
-    cg.add_library(
-        "SmartRC-CC1101-Driver",
-        None,
-        "https://github.com/LSatan/SmartRC-CC1101-Driver-Lib.git#v3.0.2",
-    )
-
-    cg.add_library(
-        "wM-Bus-drivers",
-        None,
-        "https://github.com/SzczepanLeon/wmbus-drivers#1.3.13",
-    )

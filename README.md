@@ -40,7 +40,6 @@ time:
 
 external_components:
   - source: github://SzczepanLeon/esphome-components@version_3
-    components: [ wmbus ]
 
 wmbus:
   frequency: 434.475

@@ -12,7 +12,7 @@
 #include <map>
 #include <string>
 
-#include "drivers.h"
+#include "esphome/components/wmbus_drivers/drivers.h"
 
 #include <WiFiClient.h>
 #include <WiFiUdp.h>

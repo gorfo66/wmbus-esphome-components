@@ -11,7 +11,7 @@
 #include <string>
 #include <stdint.h>
 
-#include <ELECHOUSE_CC1101_SRC_DRV.h>
+#include "esphome/components/smarttc_cc1101/ELECHOUSE_CC1101_SRC_DRV.h"
 
 
 // CC1101 state machine

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <ELECHOUSE_CC1101_SRC_DRV.h>
+#include "esphome/components/smarttc_cc1101/ELECHOUSE_CC1101_SRC_DRV.h"
 
 const uint8_t TMODE_RF_SETTINGS_LEN = 47;
 
