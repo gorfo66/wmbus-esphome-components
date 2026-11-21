@@ -17,6 +17,17 @@
 namespace esphome {
 namespace wmbus {
 
+  inline std::string format_hex_pretty(const std::vector<unsigned char> &data) {
+    if (data.empty()) {
+      return {};
+    }
+
+    std::string formatted(format_hex_pretty_size(data.size()), '\0');
+    esphome::format_hex_pretty_to(formatted.data(), formatted.size(), data.data(), data.size(), '.');
+    formatted.resize(formatted.size() - 1);
+    return formatted;
+  }
+
   uint16_t packetSize(uint8_t t_L);
   uint16_t byteSize(uint16_t t_packetSize);
 
